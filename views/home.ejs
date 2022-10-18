@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/path/to/material-icons/iconfont/material-icons.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="/path/to/material-icons/iconfont/material-icons.css" rel="stylesheet">
+    <title>Ghar Bhada</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+        <h3>Ghar Bhada</h3><h6>(My personal rent tracking website)</h6>
+        </div>
+        <div class="add">
+            <a href="/add" class="btn btn-success">Add Rentee +</a>
+        </div>
+    </div>
+    
+    <% renteeList.forEach((rent,index)=>{ %>
+    <div class="card" style="width: 18rem; margin-top: 10px;">
+        <div class="card-body">
+        <h5 class="card-title">Name:&nbsp;<%= rent.Fname%></h5>
+        <p class="card-text">Phone:&nbsp;<%= rent.phone %></p>
+        <p class="card-text">Rooms:&nbsp;<%= rent.number_of_rooms%></p>
+        <p class="card-text">Price:&nbsp; Rs&nbsp;<%= rent.price %></p>
+
+        
+        <a href="/viewdetails/<%= rent._id%>" class="btn btn-primary">View</a>
+        <a href="/edit/<%=rent._id %>" class="btn btn-info">Edit</a>
+        <a href="/delete/<%= rent._id %>" class="btn btn-danger">Delete</a>
+
+   
+     
+   
+        </div>
+    </div>
+    <% }) %>
+  
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+  margin: 5px;
+ 
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+div.header{
+  background-color:#32CD32;
+  color: white;
+  padding-bottom: 20px ;
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+}
+ div.logo{
+  width: 500px;
+  padding-left: 10px;
+ }
+div.add{
+  align-content: right;
+  margin-bottom:20px;
+}
+
+div.add{
+  float: right;
+  margin-right: 50px;
+}
+table.thead-green{
+ background: #32CD32;
+}
